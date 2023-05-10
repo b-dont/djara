@@ -1,3 +1,3 @@
 # djara
 
-Open source, light-weight ticketing site. 
+Open source, light-weight ticketing platform. 
