@@ -1,0 +1,9 @@
+{% if ticket_list %}
+  <ul>
+  {% for ticket in ticket_list %}
+    <li><a href="/tickets/{{ ticket.id }}/">{{ ticket.summary_text }}</a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No tickets available</p>
+{% endif %}

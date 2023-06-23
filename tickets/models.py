@@ -13,6 +13,11 @@ class Ticket(models.Model):
         WAITING_FOR_CUSTOMER = "Waiting for customer"
 
     summary_text = models.CharField(max_length=200)
+    project_id = models.CharField(max_length=5)
+    ticket_id = models.AutoField(
+        primary_key=True,
+        default=0
+    )
     details_text = models.CharField(
         max_length=500,
         default="Details here."
