@@ -4,13 +4,19 @@ import datetime
 
 
 class Ticket(models.Model):
+
     class TicketStatus(models.TextChoices):
         OPEN = "Open"
+        CLOSED = "Closed"
         IN_PROGRESS = "In progress"
         WAITING_FOR_SUPPORT = "Waiting for support"
         WAITING_FOR_CUSTOMER = "Waiting for customer"
 
     summary_text = models.CharField(max_length=200)
+    details_text = models.CharField(
+        max_length=500,
+        default="Details here."
+    )
     reported_date = models.DateTimeField("Reported")
     status = models.CharField(
         max_length=30,
